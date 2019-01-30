@@ -123,6 +123,8 @@ GameObject:
   - component: {fileID: 22745986}
   - component: {fileID: 22745987}
   - component: {fileID: 22745988}
+  - component: {fileID: 22745989}
+  - component: {fileID: 22745990}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -156,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9634c0210be38465d99d7e06957d7f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerData: {fileID: 0}
 --- !u!114 &22745988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +172,74 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayScore: {fileID: 393553330}
-  Score: {fileID: 11400000, guid: 3bf0dae48c90a470da84fa2b48287f27, type: 2}
+  Score: {fileID: 0}
+  PD: {fileID: 11400000, guid: 06a2e661745de4135aa8904af29d72c3, type: 2}
+  eventShowScore: {fileID: 11400000, guid: 231b3a4c0a1224cbaa582a45c8933094, type: 2}
+--- !u!114 &22745989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22745985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474666b89042e4f60a5eff30ee79e18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 06a2e661745de4135aa8904af29d72c3, type: 2}
+  eventShowScore: {fileID: 11400000, guid: 231b3a4c0a1224cbaa582a45c8933094, type: 2}
+--- !u!114 &22745990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22745985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f64c64ed461947b4a270a33df3bdd87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventAndResponses:
+  - name: 
+    gameEvent: {fileID: 11400000, guid: 231b3a4c0a1224cbaa582a45c8933094, type: 2}
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 22745988}
+          m_MethodName: DisplayScore
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    responseForSentString:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: ResponseWithString, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    responseForSentInt:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: ResponseWithInt, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    responseForSentFloat:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: ResponseWithFloat, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    responseForSentBool:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: ResponseWithBool, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
 --- !u!1 &42052293
 GameObject:
   m_ObjectHideFlags: 0

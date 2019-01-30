@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dea2040604c2342a2b29d9a3d43a271a, type: 3}
-  m_Name: Score
+  m_Script: {fileID: 11500000, guid: 3a07b0152ebf34b1c960b44a13b69305, type: 3}
+  m_Name: Event_UpdateScore
   m_EditorClassIdentifier: 
-  DeveloperDescription: 'score
-
-'
-  Value: 0
+  sentString: 
+  sentInt: 0
+  sentFloat: 0
+  sentBool: 0

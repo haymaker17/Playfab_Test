@@ -2,34 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameCode : MonoBehaviour
-{
+
+public class GameCode : MonoBehaviour {
 
     public TMPro.TMP_Text displayScore;
 
     public IntVariable Score;
+    public PlayerDataVariable PD;
+
+    private GM_DataManager dataController;
+    public GameEvent eventShowScore;
 
     private void Awake() {
-        DisplayScore();
+        dataController = GetComponent<GM_DataManager>();
     }
 
    public void IncreaseScore() {
        Score.ApplyChange(1);
+       PD.ChangeMoney(1);
 
-       DisplayScore();
+       eventShowScore.Raise();
+       dataController.SavePlayerProgress();
    }
 
    public void DecreaseScore() {
        Score.ApplyChange(-1);
+       PD.ChangeMoney(-1);
        
-       DisplayScore();
+       eventShowScore.Raise();
+       dataController.SavePlayerProgress();
    }
 
-   void DisplayScore() {
-       Debug.Log(Score.Value);
-       displayScore.text = Score.Value.ToString();
+   public void DisplayScore() {
+       Debug.Log("display score " + PD.playerMoney);
+       displayScore.text = PD.playerMoney.ToString();
    }
-
-
 
 }

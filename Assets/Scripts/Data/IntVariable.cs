@@ -7,7 +7,7 @@ public class IntVariable : ScriptableObject {
 
     #if UNITY_EDITOR
         [Multiline]
-        public string DeveloperDescription = "";
+        public string Description = "";
     #endif
   
     public int Value;
